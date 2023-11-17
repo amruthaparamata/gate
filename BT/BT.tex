@@ -134,8 +134,13 @@ $Y$ be the random variable representing the number on the second card drawn.\\
 \end{table}\\
 \begin{align}
 p_X\brak{X = i} = \frac{1}{10}, 1 \le i \le 10\\
-p_Y\brak{Y = i} = \frac{1}{10}, 1 \le i \le 10\\
-p_{X-Y}\brak{X-Y = k} = 
+p_Y\brak{Y = i} = \frac{1}{10}, 1 \le i \le 10
+\end{align}
+Let $Z = X-Y$,
+For a given $X = x$, possible values of $Y$ are $x+1, x+2, \ldots, 10$.\\
+Therefore, $Z$ can be given as $ x-(x+1), x-(x+2), \ldots, x-10$.
+\begin{align}
+p_{Z}\brak{Z = k} = 
                 \begin{cases}
 		\frac{11-x-k}{10} , & \text{if} 1 \le k \le 10-x\\ 
 		0, & \text{otherwise}
@@ -143,7 +148,7 @@ p_{X-Y}\brak{X-Y = k} =
 \end{align}
 The probability that the second card's number is greater than the first card's number is given by:
 \begin{align}
-\pr{Y>X} = \sum_{x=1}^{10}\sum_{k=1}^{10-x} \pr{X-Y = k \mid X = x} \cdot \pr{X = x}\\
+\pr{Y>X} = \sum_{x=1}^{10}\sum_{k=1}^{10-x} \pr{Z = k \mid X = x} \cdot \pr{X = x}\\
 \pr{Y>X} = \sum_{x=1}^{10}\sum_{k=1}^{10-x} \frac{1}{10} \cdot \frac{11-x-k}{10}
 \end{align}
 \begin{align}
