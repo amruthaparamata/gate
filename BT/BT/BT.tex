@@ -118,19 +118,51 @@ Question : Ten playing cards numbered 1, 2, 3, .., 10 are placed face down on a 
 \solution\\
 Let, $X$ be the random variable representing number on the first draw.\\
 $Y$ be the random variable representing the number on the second card drawn.\\
+\begin{table}[h!]
+ \begin{center}
+    \begin{tabular}{|l|c|r|}
+    \hline
+    Parameter & Values & Description\\
+    \hline
+    {} & 1 & card with number 1\\
+    {} & 2 & card with number 2\\
+    {} & 3 & card with number 3\\
+    {} & 4 & card with number 4\\
+    {} & 5 & card with number 5\\
+    $X$ & 6 & card with number 6\\
+    {} & 7 & card with number 7\\
+    {} & 8 & card with number 8\\
+    {} & 9 & card with number 9\\
+    {} & 10 & card with number 10\\
+    \hline
+    {} & 1 & card with number 1\\
+    {} & 2 & card with number 2\\
+    {} & 3 & card with number 3\\
+    {} & 4 & card with number 4\\
+    {} & 5 & card with number 5\\
+    $Y$ & 6 & card with number 6\\
+    {} & 7 & card with number 7\\
+    {} & 8 & card with number 8\\
+    {} & 9 & card with number 9\\
+    {} & 10 & card with number 10\\
+    \hline
+    \end{tabular}
+    \end{center}
+  \label{tab:BT/61} 
+\end{table}\\
 The probability that the second card's number is greater than the first card's number is given by:
 \begin{align}
 \pr{Y>X} = \sum_{x=1}^{10} \pr{Y > X \mid X = x} \cdot \pr{X = x}
 \end{align}
 For a given $X = x$, the possible values for $Y$ are $x+1, x+2, \ldots, 10$.
 \begin{align}
-\implies \pr{Y > X \mid X = x} = \frac{11 - x}{10}
+\implies \pr{Y > X \mid X = x} = \frac{10 - x}{10}
 \end{align}
 \begin{align}
-\therefore \pr{Y > X} = \sum_{x=1}^{10} \frac{11 - x}{10} \cdot \frac{1}{10}
+\therefore \pr{Y > X} = \sum_{x=1}^{10} \frac{10 - x}{10} \cdot \frac{1}{10}
 \end{align}
 \begin{align}
-\pr{Y > X} = 0.55
+\pr{Y > X} = 0.45
 \end{align}
-Therefore, the probability that the number on the second draw is greater than the number on the first draw is approximately $0.55$ or $55\%$.
+Therefore, the probability that the number on the second draw is greater than the number on the first draw is approximately $0.45$ or $45\%$.
 \end{document}
